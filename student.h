@@ -1,18 +1,22 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
+#define NUM_SUBJECTS 5
+
 typedef struct Student {
     char *studentId;
     char *name;
-    int minorMarks[5];
-    int majorMarks[5];
+    Subject subjects[NUM_SUBJECTS];
     int total;
     char *grade;
     float cgpa;
+    Student *next;
 } Student;
 
-Student *initializeStudent(char *id, char *name, int marks);
+Student *addStudent(char *id, char *name);
+void addMinorMarks(int *minorMarks);
+void addMajorMarks(int *majorMarks);
 void updateStudentsGrades(Student *student);
-void tabulateClassResults(Student *student);
+void tabulateClassResults(Student *, char *filename);
 
 #endif
