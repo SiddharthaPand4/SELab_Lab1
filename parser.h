@@ -1,6 +1,7 @@
 #ifndef PARSER_H
 #define PARSER_H
+#include "student.h"
 
-void parseInputFile(char *filename);
+Student *parseInputFile(char *filename);
 
 #endif
