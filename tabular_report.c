@@ -130,8 +130,10 @@ void writeClassReportToFile(TabularReport *r, FILE *fp)
 
     fprintf(fp, "\nGrade Distribution\n");
     fprintf(fp, "---------------------------------------------\n");
+    fprintf(fp, "O  : %d\n", r->gradeO);
     fprintf(fp, "A+ : %d\n", r->gradeAPlus);
     fprintf(fp, "A  : %d\n", r->gradeA);
+    fprintf(fp, "B+  : %d\n", r->gradeBPlus);
     fprintf(fp, "B  : %d\n", r->gradeB);
     fprintf(fp, "C  : %d\n", r->gradeC);
     fprintf(fp, "D  : %d\n", r->gradeD);

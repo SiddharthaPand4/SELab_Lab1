@@ -43,6 +43,7 @@ Student *parseInputFile(char *filename)
                 int minorMarks, majorMarks;
                 if (sscanf(line, "%d, %d", &minorMarks, &majorMarks) == 2)
                 {
+                    // fprintf(stderr, "Parsed Marks: %s %d %d\n", student->name, minorMarks, majorMarks);
                     Subject *newSubject = addSubject(subjectName, minorMarks, majorMarks);
                     student->subjects[subject_i++] = newSubject;
                 }
@@ -56,7 +57,7 @@ Student *parseInputFile(char *filename)
         else
         {
             fprintf(stderr, "Could not parse student line: %s\n", line);
-            fprintf(stderr, "Could not parse student: %s %s\n", name, studentId);
+            // fprintf(stderr, "Could not parse student: %s %s\n", name, studentId);
             exit(1);
         }
     }

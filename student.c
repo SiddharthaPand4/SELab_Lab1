@@ -71,7 +71,7 @@ Student *addStudent(Student *studentHead, char *id, char *name)
     return student;
 }
 
-void updateStudentsGrades(Student *student)
+void updateStudentGrades(Student *student)
 {
     if (student == NULL)
         return;
@@ -108,4 +108,20 @@ void updateStudentsGrades(Student *student)
         student->grade = "D";
     else
         student->grade = "F";
+}
+
+void updateStudentsGrades(Student *head)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+
+    Student *curr = head;
+
+    while (curr)
+    {
+        updateStudentGrades(curr);
+        curr = curr->next;
+    }
 }
