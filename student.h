@@ -16,9 +16,41 @@ typedef struct Student
     struct Student *next;
 } Student;
 
+/*
+Input:
+   - head: Head of the current student linked list
+   - id  : Student id
+   - name: Student name
+
+Pre-conditions:
+   - id must be alphanumeric and name must only be letters.
+
+Logic:
+   - Allocate memory for a new Student
+   - Initialize fields
+   - Set next pointer to NULL
+
+Output:
+   - Returns pointer to newly created Student
+ */
 Student *addStudent(Student *head, char *id, char *name);
-// void addMinorMarks(int *minorMarks);
-// void addMajorMarks(int *majorMarks);
+
+/*
+Input:
+   - student: Head of the student linked list
+
+ Pre-conditions:
+   - Subject marks must already be there
+
+ Logic:
+   - For each student:
+       - Compute subject totals
+       - Compute aggregate total and percentage
+       - Assign grade based on score
+
+ Output:
+   - NA (Updates in-place)
+*/
 void updateStudentsGrades(Student *student);
 
 #endif

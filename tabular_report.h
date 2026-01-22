@@ -18,6 +18,23 @@ typedef struct TabularReport
 
 } TabularReport;
 
+/*
+ Input:
+   - head     : Head of the student linked list
+   - filename : Output file path
+
+ Pre-conditions:
+   - Student grades and percentages must be computed
+
+ Logic:
+   - Traverse student list
+   - Compute class statistics
+   - Count students in each grade
+   - Write tabular report and student-wise details to file
+
+ Output:
+   - Generates a formatted class report in the output file
+*/
 void tabulateClassResults(Student *head, char *filename);
 
 #endif
